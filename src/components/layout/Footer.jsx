@@ -39,8 +39,8 @@ const Footer = () => {
         <section className='col-6 col-md-3'>
           <h6>Connect</h6>
           <ul className='list-unstyled'>
-            {contacts.map((contact)=>
-                <li><FontAwesomeIcon icon={contact.icon} size="lg" /> <a href={contact.href}>{contact.info}</a></li>
+            {contacts.map((contact,index)=>
+                <li key={index}><FontAwesomeIcon icon={contact.icon} size="lg" /> <a href={contact.href}>{contact.info}</a></li>
             )}
           </ul>
         </section>
