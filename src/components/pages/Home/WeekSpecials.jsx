@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import NotFound from './../NotFound/NotFound';
 
 const meals = [
   {
@@ -38,7 +40,7 @@ const WeekSpecials = () => {
         <Card.Text>
             {meal.description}
         </Card.Text>
-        <Button variant="dark">Order a Delivery </Button>
+        <Link to='/order-online' element={<NotFound/>} className='btn btn-lg btn-dark'>Order a Delivery</Link>
         </Card.Body>
     </Card>
     );
@@ -50,7 +52,7 @@ const WeekSpecials = () => {
   <article id='meals' className='pt-5'>
       <section className='d-flex justify-content-between mb-5'>
           <h3>Specials</h3>
-          <button className='btn btn-lg btn-dark'>Online Menu</button>
+          <Link to='/order-online' element={<NotFound/>} className='btn btn-lg btn-dark'>Online Menu</Link>
       </section>
       <section className='row justify-content-around g-3'>
           {listItems}
